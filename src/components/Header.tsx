@@ -16,7 +16,7 @@ export default function Header() {
                     <a href="/" className="link link-hover text-white font-bold">Home</a>
                     <a href="/about" className="link link-hover text-white font-bold">About Us</a>
                     <a href="/product" className="link link-hover text-white font-bold">Product</a>
-                    <a href="/teams" className="link link-hover text-white font-bold">Teams</a>
+                    <a href="/team" className="link link-hover text-white font-bold">Teams</a>
                     <a href="/blog" className="link link-hover text-white font-bold">Blog</a>
                 </div>
                 <div className="">

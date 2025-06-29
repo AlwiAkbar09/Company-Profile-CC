@@ -224,15 +224,15 @@ export default function HomePage() {
                     />
                 </div>
 
-                {/* Content Overlay */}
-                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start"> {/* Tambahkan relative z-10 dan text-center */}
+                
+                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start"> 
                    Good to Go? Download the<br/> Gojek app today!
                 </h1>
                 <div className="flex flex-row gap-10">
                     <button className="btn rounded-full">App Store</button>
                     <button className="btn rounded-full">Play Store</button>
                 </div>
-                {/* Tambahkan div lain jika Anda memiliki konten lain di atas gambar */}
+               
             </section>
         </>
     );

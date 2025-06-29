@@ -13,6 +13,7 @@ export default function Products() {
                         layout="responsive"
                         alt="Logo Gojek"
                     />
+                    
                 </div>
                 <h1 className="text-white font-extrabold text-5xl tracking-tight z-10 mx-60">
                     We build products that
