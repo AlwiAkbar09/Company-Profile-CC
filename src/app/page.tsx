@@ -8,16 +8,22 @@ export default function HomePage() {
     return (
         <>
             {/* {Hero Section} */}
-            <section className="flex flex-col items-center justify-center h-screen w-full bg-black gap-10">
-                <div>
-                    <Image
-                        className="text-white"
-                        src="/GojekLogo-white.svg"
-                        width={200}
-                        height={112}
-                        alt="Logo Gojek"
-                    />
-                </div>
+            <section className="relative flex flex-col items-center justify-center h-screen w-full bg-black gap-10">
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    src="/home.m4v"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                >
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            {/* {Company Overview} */}
+            <section className="flex flex-col items-center h-screen w-full bg-gray-800 gap-20 p-20">
                 <h1 className="text-white font-bold text-5xl tracking-wide">
                     One Solution For Every Need.
                 </h1>
@@ -27,8 +33,68 @@ export default function HomePage() {
                     <FaCarRear size={40} className="text-white" />
                     <FaBox size={40} className="text-white" />
                 </div>
+                <div className="grid grid-cols-3 gap-25 h-100 mt-10">
+                    <div className="relative card bg-green-300 text-primary-content w-60">
+                        <div className="card-body">
+                            <Image
+                                className="absolute right-[20px] -translate-y-1/2"
+                                src="/area.png"
+                                width={313}
+                                height={216}
+                                layout="intrinsic"
+                                alt="Logo Gojek"
+                            />
+                            <p></p>
+                            <h1 className="text-center text-black font-bold block w-full text-3xl">
+                                Operational Area
+                            </h1>
+                            <h1 className="text-center text-black font-medium block w-full text-md mb-15">
+                                Operations in Indonesia and Singapore
+                            </h1>
+                        </div>
+                    </div>
+                    <div className="relative card bg-purple-300 text-primary-content w-60">
+                        <div className="card-body">
+                            <Image
+                                className="absolute right-[20px] -translate-y-1/2"
+                                src="/driver.png"
+                                width={313}
+                                height={216}
+                                layout="intrinsic"
+                                alt="Logo Gojek"
+                            />
+                            <p></p>
+                            <h1 className="text-center text-black font-bold block w-full text-3xl">
+                                3.1 million+
+                            </h1>
+                            <h1 className="text-center text-black font-medium block w-full text-md mb-15">
+                                driver-partners
+                            </h1>
+                        </div>
+                    </div>
+                    <div className="relative card bg-orange-300 text-primary-content w-60">
+                        <div className="card-body">
+                            <Image
+                                className="absolute right-[20px] -translate-y-1/2"
+                                src="/merchant.png"
+                                width={313}
+                                height={216}
+                                layout="intrinsic"
+                                alt="Logo Gojek"
+                            />
+                            <p></p>
+                            <h1 className="text-center text-black font-bold block w-full text-3xl">
+                                20.1 million+
+                            </h1>
+                            <h1 className="text-center text-black font-medium block w-full text-md mb-15">
+                                Merchants within the GoTo ecosystem
+                            </h1>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            {/* {Product} */}
             <section className="flex flex-col items-center  h-screen w-full bg-black gap-10 p-50">
                 <div className="flex flex-col items-center">
                     <h1 className="text-white font-bold text-3xl tracking-wide text-center">
@@ -136,8 +202,37 @@ export default function HomePage() {
                             </div>
                         </div>
                     </div>
-                    <a href="#" className="btn bg-green-600 mt-10 text-white border-none rounded-full px-10">View More</a>
+                    <a
+                        href="/product"
+                        className="btn bg-green-600 mt-10 text-white border-none rounded-full px-10"
+                    >
+                        View More
+                    </a>
                 </div>
+            </section>
+            <section className="relative flex flex-col items-start justify-center h-screen w-full bg-gray-800 gap-20 p-20">
+                {/* Background Image */}
+                <div className="absolute inset-0"> {/* Menggunakan inset-0 untuk top-0, left-0, bottom-0, right-0 */}
+                    <Image
+                        src="https://cdn-site.gojek.com/uploads/ui_web_6c5eca8ca5/ui_web_6c5eca8ca5.png"
+                        alt="Gojek UI Mobile Background"
+                        layout="fill" // Menggunakan layout="fill" untuk mengisi parent
+                        objectFit="cover" // Menskalakan gambar agar menutupi seluruh area tanpa distorsi
+                        objectPosition="center" // Memastikan gambar terpusat
+                        quality={100} // Opsional: untuk kualitas gambar yang lebih baik (perhatikan ukuran file)
+                        priority // Opsional: Untuk memuat gambar ini lebih awal karena ini adalah background utama
+                    />
+                </div>
+
+                {/* Content Overlay */}
+                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start"> {/* Tambahkan relative z-10 dan text-center */}
+                   Good to Go? Download the<br/> Gojek app today!
+                </h1>
+                <div className="flex flex-row gap-10">
+                    <button className="btn rounded-full">App Store</button>
+                    <button className="btn rounded-full">Play Store</button>
+                </div>
+                {/* Tambahkan div lain jika Anda memiliki konten lain di atas gambar */}
             </section>
         </>
     );
