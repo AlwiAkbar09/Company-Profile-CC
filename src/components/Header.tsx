@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function Header() {
     return (
         <>
@@ -13,7 +14,7 @@ export default function Header() {
                     />
                 </div>
                 <div className="flex gap-10">
-                    <a href="/" className="link link-hover text-white font-bold">Home</a>
+                    <Link href="/" className="link link-hover text-white font-bold">Home</Link>
                     <a href="/about" className="link link-hover text-white font-bold">About Us</a>
                     <a href="/product" className="link link-hover text-white font-bold">Product</a>
                     <a href="/team" className="link link-hover text-white font-bold">Teams</a>

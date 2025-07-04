@@ -6,12 +6,19 @@ export default function Teams(props: ITeams) {
                 <figure>
                     <img
                         src={props.picture}
-                        alt="Shoes"
+                        alt="Teams"
                     />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">{props.name.title}{"."}{props.name.first}{" "}{props.name.last}</h2>
-                    <h3 className="text-gray-500 font-semibold"> Software Engineer</h3>
+                    <h2 className="card-title">
+                        {props.name.title}
+                        {"."}
+                        {props.name.first} {props.name.last}
+                    </h2>
+                    <h3 className="text-gray-500 font-semibold">
+                        {" "}
+                        Software Engineer
+                    </h3>
                     <p>{props.bio}</p>
                 </div>
             </div>

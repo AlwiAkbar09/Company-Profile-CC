@@ -26,7 +26,7 @@ export default function Team() {
                 <h1 className="text-black font-extrabold text-5xl tracking-tight my-20">
                     Meet Our Teams
                 </h1>
-                <div className="grid grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                     {teams.map((item, index) => {
                         return (
                             <Link

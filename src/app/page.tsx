@@ -37,7 +37,7 @@ export default function HomePage() {
                     <div className="relative card bg-green-300 text-primary-content w-60">
                         <div className="card-body">
                             <Image
-                                className="absolute right-[20px] -translate-y-1/2"
+                                className="absolute right-[20px] -translate-y-1/2 -mt-10"
                                 src="/area.png"
                                 width={313}
                                 height={216}
@@ -45,18 +45,20 @@ export default function HomePage() {
                                 alt="Logo Gojek"
                             />
                             <p></p>
-                            <h1 className="text-center text-black font-bold block w-full text-3xl">
-                                Operational Area
-                            </h1>
-                            <h1 className="text-center text-black font-medium block w-full text-md mb-15">
-                                Operations in Indonesia and Singapore
-                            </h1>
+                            <div className="-mb-10">
+                                <h1 className="text-center text-black font-bold block w-full text-3xl ">
+                                    Operational Area
+                                </h1>
+                                <h1 className="text-center text-black font-medium block w-full text-md mb-15">
+                                    Operations in Indonesia and Singapore
+                                </h1>
+                            </div>
                         </div>
                     </div>
                     <div className="relative card bg-purple-300 text-primary-content w-60">
                         <div className="card-body">
                             <Image
-                                className="absolute right-[20px] -translate-y-1/2"
+                                className="absolute right-[20px] -translate-y-1/2 -mt-10"
                                 src="/driver.png"
                                 width={313}
                                 height={216}
@@ -75,7 +77,7 @@ export default function HomePage() {
                     <div className="relative card bg-orange-300 text-primary-content w-60">
                         <div className="card-body">
                             <Image
-                                className="absolute right-[20px] -translate-y-1/2"
+                                className="absolute right-[20px] -translate-y-1/2 -mt-10"
                                 src="/merchant.png"
                                 width={313}
                                 height={216}
@@ -86,7 +88,7 @@ export default function HomePage() {
                             <h1 className="text-center text-black font-bold block w-full text-3xl">
                                 20.1 million+
                             </h1>
-                            <h1 className="text-center text-black font-medium block w-full text-md mb-15">
+                            <h1 className="text-center text-black font-medium block w-full text-md mb-10">
                                 Merchants within the GoTo ecosystem
                             </h1>
                         </div>
@@ -95,9 +97,9 @@ export default function HomePage() {
             </section>
 
             {/* {Product} */}
-            <section className="flex flex-col items-center  h-screen w-full bg-black gap-10 p-50">
+            <section className="flex flex-col items-center  h-screen w-full bg-black gap-10">
                 <div className="flex flex-col items-center">
-                    <h1 className="text-white font-bold text-3xl tracking-wide text-center">
+                    <h1 className="text-white font-bold text-3xl tracking-wide text-center my-5">
                         We have 20+ products serving millions of customers
                         across{" "}
                         <a className="text-green-400">Transport & Logistics</a>,
@@ -212,7 +214,9 @@ export default function HomePage() {
             </section>
             <section className="relative flex flex-col items-start justify-center h-screen w-full bg-gray-800 gap-20 p-20">
                 {/* Background Image */}
-                <div className="absolute inset-0"> {/* Menggunakan inset-0 untuk top-0, left-0, bottom-0, right-0 */}
+                <div className="absolute inset-0">
+                    {" "}
+                    {/* Menggunakan inset-0 untuk top-0, left-0, bottom-0, right-0 */}
                     <Image
                         src="https://cdn-site.gojek.com/uploads/ui_web_6c5eca8ca5/ui_web_6c5eca8ca5.png"
                         alt="Gojek UI Mobile Background"
@@ -224,15 +228,14 @@ export default function HomePage() {
                     />
                 </div>
 
-                
-                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start"> 
-                   Good to Go? Download the<br/> Gojek app today!
+                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start">
+                    Good to Go? Download the
+                    <br /> Gojek app today!
                 </h1>
                 <div className="flex flex-row gap-10">
                     <button className="btn rounded-full">App Store</button>
                     <button className="btn rounded-full">Play Store</button>
                 </div>
-               
             </section>
         </>
     );
