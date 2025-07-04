@@ -117,7 +117,7 @@ export default function Register() {
                                 type="submit"
                                 className="btn btn-neutral mt-4"
                             >
-                                Login
+                                Register
                             </button>
                         </Form>
                     </Formik>

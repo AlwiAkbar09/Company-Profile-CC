@@ -1,19 +1,24 @@
 
 
 "use client";
+
 import { Field, Formik, ErrorMessage, Form } from "formik";
-import { loginValidationSchemas } from "../../features/login/schemas/loginValidationSchemas";
+import { loginValidationSchema } from "./schema/loginValidationSchemas";
 import { IUsers } from '@/app/auth/register/type'
 import axios from "axios";
 import { toast } from "react-toastify";
-import { authStore } from "../../store/auth.store";
+import { authStore } from "@/store/auth.store";
+
 
 export default function LoginPage() {
     const { setAuth } = authStore();
 
-    const OnPostLogin = async ({ email, password }: IUsers) => {
+    const OnPostLogin = async ({
+    email,
+    password,
+  }: Pick<IUsers, 'email' | 'password'>) =>  {
         try {
-            const valuesToSend = { email, password };
+            const valuesToSend = { email: email.toLowerCase(), password };
 
             const response = await axios.post(
                 "http://localhost:3000/api/users/login",
@@ -25,7 +30,7 @@ export default function LoginPage() {
                 email: response?.data.user?.email,
                 username: response?.data?.user?.username,
                 role: response?.data?.user?.role,
-                userId: response?.data?.user?.userId
+                objectId: response?.data?.user?.objectId
             });
         } catch (error) {
             console.log(error);
@@ -41,7 +46,7 @@ export default function LoginPage() {
                             email: "",
                             password: "",
                         }}
-                        validationSchema={loginValidationSchemas}
+                        validationSchema={loginValidationSchema}
                         onSubmit={(values) => {
                             OnPostLogin({
                                 email: values.email,
