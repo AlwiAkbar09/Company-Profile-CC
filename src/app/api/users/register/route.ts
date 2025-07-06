@@ -1,4 +1,4 @@
-import Backendless from "@/lib/backendless";
+import Backendless from "@/lib/backendlessClient";
 import { NextRequest,NextResponse } from "next/server";
 
 
