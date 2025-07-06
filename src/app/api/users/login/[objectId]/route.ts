@@ -2,8 +2,8 @@ import Backendless from "@/lib/backendlessClient";
 import { NextRequest, NextResponse } from "next/server";
 import { IUsers } from "@/app/auth/register/type";
 
-export async function GET(req: NextRequest, { params }: { params: { objectId: string } }) {
-  const { objectId } = await params;
+export async function GET(req: NextRequest, context: { params: { objectId: string } }) {
+  const { objectId } = context.params;
 
   try {
     const user = await Backendless.Data.of('Users_CP').findById(objectId) as IUsers;
