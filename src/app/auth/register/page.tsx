@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Field, Formik, ErrorMessage, Form } from "formik";
 import { registerValidationSchema } from "./schema/registerValidationSchema";
-import { IUsers } from "./type";
+import { IRegis} from "./type";
 import axios from "axios";
 export default function Register() {
     const OnPostRegis = async ({
@@ -12,7 +12,7 @@ export default function Register() {
         email,
         password,
         role,
-    }: IUsers) => {
+    }: IRegis) => {
         try {
             const valuesToSend = { username, email, password, role };
 

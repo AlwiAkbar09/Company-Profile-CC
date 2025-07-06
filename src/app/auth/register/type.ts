@@ -6,3 +6,10 @@ export interface IUsers {
   role: string;
 
 }
+
+export interface IRegis {
+  username: string;
+  email: string;
+  password: string;
+  role: string;
+}
