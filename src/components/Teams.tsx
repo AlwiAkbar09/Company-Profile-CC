@@ -1,13 +1,10 @@
-import { ITeams } from "./type";
-export default function Teams(props: ITeams) {
+import { ITeam } from "./type";
+export default function Teams(props: ITeam) {
     return (
         <>
             <div className="card bg-base-100 w-96 shadow-sm">
                 <figure>
-                    <img
-                        src={props.picture}
-                        alt="Teams"
-                    />
+                    <img src={props.picture.large} alt="Teams" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
@@ -19,7 +16,7 @@ export default function Teams(props: ITeams) {
                         {" "}
                         Software Engineer
                     </h3>
-                    <p>{props.bio}</p>
+                    <p>{props.dob.age} Years Old</p>
                 </div>
             </div>
         </>

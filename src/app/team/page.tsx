@@ -1,10 +1,14 @@
 'use client'
 import Teams from "@/components/Teams";
+import { ITeam } from "@/components/type";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Team() {
-    const [teams, setTeams] = useState<[] | any[]>([]);
+
+    
+ 
+    const [teams, setTeams] = useState<ITeam[]>([]);
 
     const onGetTeam = async () => {
         try {
@@ -34,10 +38,7 @@ export default function Team() {
                                 key={index}
                             >
                                 <Teams
-                                picture ={item?.picture?.large}
-                                name={item?.name}
-                                role={item?.role}
-                                bio={`Age: ${item?.dob?.age}`}
+                                {...item}
                                  />
                             </Link>
                         );

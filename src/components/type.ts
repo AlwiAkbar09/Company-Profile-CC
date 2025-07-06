@@ -1,13 +1,17 @@
-
-export interface IUserName {
-  title: string;
-  first: string;
-  last: string;
-}
-
-export interface ITeams {
-    picture : string ;
-    name: IUserName;
-    role:string;
-    bio: string;
+export interface ITeam {
+  login: {
+    uuid: string;
+  };
+  name: {
+    title: string;
+    first: string;
+    last: string;
+  };
+  picture: {
+    large: string;
+  };
+  dob: {
+    age: number;
+  };
+  role?: string;
 }

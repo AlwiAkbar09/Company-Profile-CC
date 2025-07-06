@@ -35,7 +35,7 @@ export default function AboutUs() {
                                 <p>
                                     Gojek started with a mission to improve the
                                     livelihoods of local ojeks (motorcycle
-                                    taxis). Every customer was 'matched'
+                                    taxis). Every customer was &apos;matched&apos;
                                     manually with a driver via a call center.
                                 </p>
                             </div>
@@ -174,9 +174,9 @@ export default function AboutUs() {
                                 </h1>
                                 <p>
                                     Downtimes were a routine affair and leaky
-                                    faucets needed to be fixed. <br /> "No
+                                    faucets needed to be fixed. <br /> &quot;No
                                     project has a budget and impact as big as
-                                    this in Gojek's history"
+                                    this in Gojek&apos;s history&quot;
                                     <br /> - From Nadiem’s internal mail.
                                 </p>
                             </div>
@@ -308,7 +308,7 @@ export default function AboutUs() {
                                     In 2019
                                 </h1>
                                 <p>
-                                    Gojek became Indonesia"s first decacorn. We
+                                    Gojek became Indonesia&apos;s first decacorn. We
                                     also underwent a massive rebranding and had
                                     a new identity: Solv.
                                 </p>
@@ -335,7 +335,7 @@ export default function AboutUs() {
                                 </h1>
                                 <p>
                                     Gojek contributed $7.1 billion to the
-                                    Indonesian economy in 2019 (that's more than
+                                    Indonesian economy in 2019 (that&apos;s more than
                                     twice of 2018!)
                                 </p>
                             </div>
