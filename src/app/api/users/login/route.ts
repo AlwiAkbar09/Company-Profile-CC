@@ -25,6 +25,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({
             message: 'User Login Successfully',
             user: {
+                objectId: user.objectId,
                 username: user.username,
                 email: user.email,
                 role: user.role

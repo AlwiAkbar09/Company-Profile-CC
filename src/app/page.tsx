@@ -212,27 +212,26 @@ export default function HomePage() {
                     </a>
                 </div>
             </section>
-            <section className="relative flex flex-col items-start justify-center h-screen w-full bg-gray-800 gap-20 p-20">
+            <section className="relative flex flex-col items-start justify-center h-screen w-full bg-gray-800 gap-10 p-20">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     {" "}
-                    {/* Menggunakan inset-0 untuk top-0, left-0, bottom-0, right-0 */}
                     <Image
                         src="https://cdn-site.gojek.com/uploads/ui_web_6c5eca8ca5/ui_web_6c5eca8ca5.png"
                         alt="Gojek UI Mobile Background"
-                        layout="fill" // Menggunakan layout="fill" untuk mengisi parent
-                        objectFit="cover" // Menskalakan gambar agar menutupi seluruh area tanpa distorsi
-                        objectPosition="center" // Memastikan gambar terpusat
-                        quality={100} // Opsional: untuk kualitas gambar yang lebih baik (perhatikan ukuran file)
-                        priority // Opsional: Untuk memuat gambar ini lebih awal karena ini adalah background utama
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                        quality={100}
+                        priority
                     />
                 </div>
 
-                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start">
-                    Good to Go? Download the
-                    <br /> Gojek app today!
+                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start mt-15">
+                    Good to Go? Download <br />
+                    the Gojek app today!
                 </h1>
-                <div className="flex flex-row gap-10">
+                <div className="flex flex-row gap-10 z-10">
                     <button className="btn rounded-full">App Store</button>
                     <button className="btn rounded-full">Play Store</button>
                 </div>
