@@ -9,6 +9,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { authStore } from "@/store/auth.store";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function LoginPage() {
     const { setAuth } = authStore();
@@ -21,7 +22,7 @@ export default function LoginPage() {
             const valuesToSend = { email: email.toLowerCase(), password };
 
             const response = await axios.post(
-                "http://localhost:3000/api/users/login",
+                `${API_BASE_URL}/api/users/login`,
                 valuesToSend
             );
             console.log(response?.data.user);

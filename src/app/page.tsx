@@ -8,9 +8,24 @@ export default function HomePage() {
     return (
         <>
             {/* {Hero Section} */}
-            <section className="relative flex flex-col items-center justify-center h-screen w-full bg-black gap-10">
+            <section className="relative flex flex-col items-center justify-center h-screen w-full bg-black gap-5 md:gap-10">
+                <div className="absolute inset-0 flex flex block md:hidden">
+                    <Image
+                    src="https://cdn-site.gojek.com/uploads/multiservice_mobile_v2_a57833d7eb/multiservice_mobile_v2_a57833d7eb.png"
+                    alt="Gojek UI Mobile Background"
+                    fill
+                    objectFit="cover"
+                    objectPosition="center"
+                    quality={100}
+                    priority
+                />
+                <h1 className="text-white text-center font-extrabold text-xl tracking-tight z-10 mx-auto mt-50">
+                    Beragam Kebutuhan, Satu Solusi #PastiAdaJalan
+                </h1>
+
+                </div>
                 <video
-                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    className="absolute top-0 left-0 w-full min-h-full object-cover hidden md:block"
                     src="/home.m4v"
                     autoPlay
                     loop
@@ -23,72 +38,65 @@ export default function HomePage() {
             </section>
 
             {/* {Company Overview} */}
-            <section className="flex flex-col items-center h-screen w-full bg-gray-800 gap-20 p-20">
-                <h1 className="text-white font-bold text-5xl tracking-wide">
-                    One Solution For Every Need.
+            <section className="flex flex-col items-center min-h-screen w-full bg-gray-800 gap-5 md:gap-10 py-10 px-4 md:py-20">
+                <h1 className="text-white font-bold text-3xl md:text-5xl tracking-wide text-center">
+                    One Solution For Every Need
                 </h1>
-                <div className="flex gap-10">
-                    <IoFastFood size={40} className="text-white" />
-                    <RiEBikeFill size={40} className="text-white" />
-                    <FaCarRear size={40} className="text-white" />
-                    <FaBox size={40} className="text-white" />
+                <div className="flex gap-5 md:gap-10">
+                    <IoFastFood className="text-white w-6 h-6 md:w-10 md:h-10" />
+                    <RiEBikeFill className="text-white w-6 h-6 md:w-10 md:h-10" />
+                    <FaCarRear className="text-white w-6 h-6 md:w-10 md:h-10" />
+                    <FaBox className="text-white w-6 h-6 md:w-10 md:h-10" />
                 </div>
-                <div className="grid grid-cols-3 gap-25 h-100 mt-10">
-                    <div className="relative card bg-green-300 text-primary-content w-60">
-                        <div className="card-body">
-                            <Image
-                                className="absolute right-[20px] -translate-y-1/2 -mt-10"
-                                src="/area.png"
-                                width={313}
-                                height={216}
-                                layout="intrinsic"
-                                alt="Logo Gojek"
-                            />
-                            <p></p>
-                            <div className="-mb-10">
-                                <h1 className="text-center text-black font-bold block w-full text-3xl ">
-                                    Operational Area
-                                </h1>
-                                <h1 className="text-center text-black font-medium block w-full text-md mb-15">
-                                    Operations in Indonesia and Singapore
-                                </h1>
-                            </div>
-                        </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 mx-auto mt-10">
+                    <div className="relative bg-green-300 text-primary-content w-60 rounded-xl shadow-md p-4 flex flex-col items-center">
+                        <Image
+                            className="w-28 md:w-36 mb-5 mt-5"
+                            src="/area.png"
+                            width={313}
+                            height={216}
+                            alt="Operational Area"
+                        />
+                        <h1 className="text-center text-black font-bold text-xl md:text-2xl">
+                            Operational Area
+                        </h1>
+                        <p className="text-center text-black font-medium text-sm md:text-base mt-2">
+                            Operations in Indonesia and Singapore
+                        </p>
                     </div>
-                    <div className="relative card bg-purple-300 text-primary-content w-60">
+
+                    <div className="relative card bg-purple-300 text-primary-content w-60 rounded-xl shadow-md p-4 flex flex-col items-center">
                         <div className="card-body">
                             <Image
-                                className="absolute right-[20px] -translate-y-1/2 -mt-10"
+                                className="w-28 md:w-36 mb-5"
                                 src="/driver.png"
                                 width={313}
                                 height={216}
-                                layout="intrinsic"
                                 alt="Logo Gojek"
                             />
-                            <p></p>
-                            <h1 className="text-center text-black font-bold block w-full text-3xl">
+
+                            <h1 className="text-center text-black font-bold text-xl md:text-2xl">
                                 3.1 million+
                             </h1>
-                            <h1 className="text-center text-black font-medium block w-full text-md mb-15">
+                            <h1 className="text-center text-black font-medium text-sm md:text-base mt-2">
                                 driver-partners
                             </h1>
                         </div>
                     </div>
-                    <div className="relative card bg-orange-300 text-primary-content w-60">
+                    <div className="relative card bg-orange-300 text-primary-content w-60 rounded-xl shadow-md p-4 flex flex-col items-center">
                         <div className="card-body">
                             <Image
-                                className="absolute right-[20px] -translate-y-1/2 -mt-10"
+                                className="w-28 md:w-36 mb-5"
                                 src="/merchant.png"
                                 width={313}
                                 height={216}
-                                layout="intrinsic"
                                 alt="Logo Gojek"
                             />
-                            <p></p>
-                            <h1 className="text-center text-black font-bold block w-full text-3xl">
+
+                            <h1 className="text-center text-black font-bold text-xl md:text-2xl">
                                 20.1 million+
                             </h1>
-                            <h1 className="text-center text-black font-medium block w-full text-md mb-10">
+                            <h1 className="text-center text-black font-medium text-sm md:text-base mt-2">
                                 Merchants within the GoTo ecosystem
                             </h1>
                         </div>
@@ -97,17 +105,17 @@ export default function HomePage() {
             </section>
 
             {/* {Product} */}
-            <section className="flex flex-col items-center  h-screen w-full bg-black gap-10">
+            <section className="flex flex-col items-center  min-h-screen w-full bg-black gap-10 py-10 px-4 md:py-20">
                 <div className="flex flex-col items-center">
-                    <h1 className="text-white font-bold text-3xl tracking-wide text-center my-5">
+                    <h1 className="text-white font-bold text-xl md:text-3xl tracking-wide text-center my-5">
                         We have 20+ products serving millions of customers
                         across{" "}
                         <a className="text-green-400">Transport & Logistics</a>,
                         Food & Shopping, Payments, Daily needs, Business, News &
                         Entertainment.
                     </h1>
-                    <div className="grid grid-cols-3 gap-10 h-100 mt-10">
-                        <div className="card bg-green-600 text-primary-content w-96">
+                    <div className="grid grid-cols-1  md:grid-cols-3 gap-6 md:gap-10 mt-10 w-full max-w-5xl">
+                        <div className="card bg-green-600 text-primary-content w-full mx-auto flex flex-col justify-between p-4 rounded-xl">
                             <div className="card-body">
                                 <Image
                                     className="text-white"
@@ -147,7 +155,7 @@ export default function HomePage() {
                                 </h1>
                             </div>
                         </div>
-                        <div className="card bg-red-600 text-primary-content w-96">
+                        <div className="card bg-red-600 text-primary-content w-full mx-auto flex flex-col justify-between p-4 rounded-xl">
                             <div className="card-body">
                                 <Image
                                     className="text-white"
@@ -179,7 +187,7 @@ export default function HomePage() {
                                 </h1>
                             </div>
                         </div>
-                        <div className="card bg-purple-600 text-primary-content w-96">
+                        <div className="card bg-purple-600 text-primary-content w-full mx-auto flex flex-col justify-between p-4 rounded-xl">
                             <div className="card-body">
                                 <Image
                                     className="text-white"
@@ -212,14 +220,26 @@ export default function HomePage() {
                     </a>
                 </div>
             </section>
-            <section className="relative flex flex-col items-start justify-center h-screen w-full bg-gray-800 gap-10 p-20">
+            <section className="relative flex flex-col items-start justify-center h-screen w-full bg-gray-800 gap-10 mx-auto p-20">
                 {/* Background Image */}
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 block md:hidden">
+                    {" "}
+                    <Image
+                        src="https://cdn-site.gojek.com/uploads/ui_mobile_9ee9b277ac/ui_mobile_9ee9b277ac.png"
+                        alt="Gojek UI Mobile Background"
+                        fill
+                        objectFit="cover"
+                        objectPosition="center"
+                        quality={100}
+                        priority
+                    />
+                </div>
+                <div className="absolute inset-0 hidden md:block">
                     {" "}
                     <Image
                         src="https://cdn-site.gojek.com/uploads/ui_web_6c5eca8ca5/ui_web_6c5eca8ca5.png"
                         alt="Gojek UI Mobile Background"
-                        layout="fill"
+                        fill
                         objectFit="cover"
                         objectPosition="center"
                         quality={100}
@@ -227,13 +247,17 @@ export default function HomePage() {
                     />
                 </div>
 
-                <h1 className="relative z-10 text-white font-bold text-5xl tracking-wide text-start mt-15">
+                <h1 className="relative z-10 text-white font-bold text-xl md:text-5xl tracking-wide text-start mt-15">
                     Good to Go? Download <br />
                     the Gojek app today!
                 </h1>
-                <div className="flex flex-row gap-10 z-10">
-                    <button className="btn rounded-full">App Store</button>
-                    <button className="btn rounded-full">Play Store</button>
+                <div className="flex flex-col md:flex-row gap-4 md:gap-10 z-10">
+                    <button className="btn rounded-full px-6 py-3 text-sm md:text-lg">
+                        App Store
+                    </button>
+                    <button className="btn rounded-full px-6 py-3 test-sm md:text-lg">
+                        Play Store
+                    </button>
                 </div>
             </section>
         </>

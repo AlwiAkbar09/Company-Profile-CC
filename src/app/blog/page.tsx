@@ -2,16 +2,16 @@
 export default function AboutUs() {
     return (
         <>
-            <section className="flex flex-col justify-start items-start h-screen w-full  gap-10 p-25">
+            <section className="flex flex-col items-center w-full min-h-screen py-10 px-4 sm:px-6 md:px-8 gap-10 mx-auto">
                 <div className="flex flex-col gap-10 mt-20">
-                    <h1 className="font-bold text-5xl">Whats On Gojek</h1>
-                    <p className="text-xl">
+                    <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl">Whats On Gojek</h1>
+                    <p className="text-md md:text-xl">
                         Our stories, latest updates, and exclusive promos. Find
                         anything you want to know about us.
                     </p>
                 </div>
-                <div className="grid grid-cols-3 gap-10">
-                    <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                    <div className="card bg-base-100 w-60 md:w-96 shadow-sm">
                         <figure>
                             <img
                                 src="https://cdn-site.gojek.com/uploads/2017_milestones_bb4454975f.svg"
@@ -30,7 +30,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                     </div>
-                    <div className="card bg-base-100 w-96 shadow-sm">
+                    <div className="card bg-base-100 w-60 md:w-96 shadow-sm">
                         <figure>
                             <img
                                 src="https://cdn-site.gojek.com/uploads/2017_milestones_bb4454975f.svg"
@@ -49,7 +49,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                     </div>
-                    <div className="card bg-base-100 w-96 shadow-sm">
+                    <div className="card bg-base-100 w-60 md:w-96 shadow-sm">
                         <figure>
                             <img
                                 src="https://cdn-site.gojek.com/uploads/2017_milestones_bb4454975f.svg"

@@ -10,8 +10,6 @@ export interface ITeam {
   picture: {
     large: string;
   };
-  dob: {
-    age: number;
-  };
   role?: string;
+  bio : string
 }

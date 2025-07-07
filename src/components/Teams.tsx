@@ -2,7 +2,7 @@ import { ITeam } from "./type";
 export default function Teams(props: ITeam) {
     return (
         <>
-            <div className="card bg-base-100 w-96 shadow-sm">
+            <div className="card bg-base-100 w-50 md:w-80 shadow-sm p-6">
                 <figure>
                     <img src={props.picture.large} alt="Teams" />
                 </figure>
@@ -14,9 +14,9 @@ export default function Teams(props: ITeam) {
                     </h2>
                     <h3 className="text-gray-500 font-semibold">
                         {" "}
-                        Software Engineer
+                        Software Developer
                     </h3>
-                    <p>{props.dob.age} Years Old</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil ab eveniet alias reiciendis praesentium inventore eum necessitatibus molestias ullam nesciunt numquam, voluptatem officia soluta. Laborum?</p>
                 </div>
             </div>
         </>

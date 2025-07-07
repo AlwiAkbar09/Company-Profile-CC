@@ -6,6 +6,8 @@ import { Field, Formik, ErrorMessage, Form } from "formik";
 import { registerValidationSchema } from "./schema/registerValidationSchema";
 import { IRegis} from "./type";
 import axios from "axios";
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 export default function Register() {
     const OnPostRegis = async ({
         username,
@@ -17,7 +19,7 @@ export default function Register() {
             const valuesToSend = { username, email, password, role };
 
             const response = await axios.post(
-                "http://localhost:3000/api/users/register",
+                `${API_BASE_URL}/api/users/register`,
                 valuesToSend
             );
             console.log(response.data);

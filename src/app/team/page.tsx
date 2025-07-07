@@ -12,7 +12,7 @@ export default function Team() {
 
     const onGetTeam = async () => {
         try {
-            const response = await axios.get("https://randomuser.me/api/?results=12");
+            const response = await axios.get("https://randomuser.me/api/?results=6");
             setTeams(response?.data?.results);
         } catch (error) {
             console.log(error);
@@ -26,7 +26,7 @@ export default function Team() {
     return (
         <>
             {/* {Landing} */}
-            <section className="flex flex-col justify-start items-center h-screen w-full  gap-6 p-25">
+            <section className="flex flex-col items-center w-full min-h-screen py-10 px-4 sm:px-6 md:px-8">
                 <h1 className="text-black font-extrabold text-5xl tracking-tight my-20">
                     Meet Our Teams
                 </h1>

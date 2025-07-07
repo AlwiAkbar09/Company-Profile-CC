@@ -3,9 +3,12 @@ import { authStore } from '@/store/auth.store';
 import axios from 'axios';
 import { ReactNode, useEffect } from 'react';
 
+
 interface ISessionAuthProviderProps {
   children: ReactNode;
 }
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function SessionAuthProvider({
   children,
@@ -18,7 +21,7 @@ export default function SessionAuthProvider({
   const onSessionLoginUser = async (objectId: string) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/users/login/${objectId}`
+        `${API_BASE_URL}/api/users/login/${objectId}`
       );
       console.log(response?.data?.user);
       setAuth({
