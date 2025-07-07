@@ -1,23 +1,24 @@
-
-
 "use client";
 
 import { Field, Formik, ErrorMessage, Form } from "formik";
 import { loginValidationSchema } from "./schema/loginValidationSchemas";
-import { IUsers } from '@/app/auth/register/type'
+import { IUsers } from "@/app/auth/register/type";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { authStore } from "@/store/auth.store";
+import { useRouter } from "next/navigation";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function LoginPage() {
+    const router = useRouter();
+
     const { setAuth } = authStore();
 
     const OnPostLogin = async ({
-    email,
-    password,
-  }: Pick<IUsers, 'email' | 'password'>) =>  {
+        email,
+        password,
+    }: Pick<IUsers, "email" | "password">) => {
         try {
             const valuesToSend = { email: email.toLowerCase(), password };
 
@@ -31,8 +32,10 @@ export default function LoginPage() {
                 email: response?.data.user?.email,
                 username: response?.data?.user?.username,
                 role: response?.data?.user?.role,
-                objectId: response?.data?.user?.objectId
+                objectId: response?.data?.user?.objectId,
             });
+
+            router.push("/");
         } catch (error) {
             console.log(error);
         }

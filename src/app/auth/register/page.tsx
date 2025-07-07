@@ -4,17 +4,16 @@ import { FaUser } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Field, Formik, ErrorMessage, Form } from "formik";
 import { registerValidationSchema } from "./schema/registerValidationSchema";
-import { IRegis} from "./type";
+import { IRegis } from "./type";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-export default function Register() {
-    const OnPostRegis = async ({
-        username,
-        email,
-        password,
-        role,
-    }: IRegis) => {
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000"
+
+export default function RegisterPage() {
+    const router = useRouter();
+
+    const OnPostRegis = async ({ username, email, password, role }: IRegis) => {
         try {
             const valuesToSend = { username, email, password, role };
 
@@ -23,6 +22,7 @@ export default function Register() {
                 valuesToSend
             );
             console.log(response.data);
+            router.push("/auth/login");
         } catch (error) {
             console.log(error);
         }
