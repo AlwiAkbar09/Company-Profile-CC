@@ -25,7 +25,7 @@ export default function HomePage() {
 
                 </div>
                 <video
-                    className="absolute top-0 left-0 w-full min-h-full object-cover hidden md:block"
+                    className="absolute top-0 left-0 w-full max-h-screen object-cover  hidden md:block"
                     src="/home.m4v"
                     autoPlay
                     loop
